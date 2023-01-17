@@ -84,7 +84,5 @@ module.exports = class AuthController {
         } catch (error) {
             req.flash('message',`Erro ao cadastrar: ${error}`)
         }        
-    }
-
-    
+    }    
 }
