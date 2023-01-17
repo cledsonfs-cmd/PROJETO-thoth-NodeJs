@@ -1,0 +1,13 @@
+<div class="home-header">
+        <h1><span>Projetos</span></h1>
+</div>
+<div class="toughts-container">
+    {{#each objetos}}
+        <figure>
+            <blockquote>
+                {{ this.nome }}
+            </blockquote>
+            <figcaption>por <span>{{this.descricao}}</span></figcaption>
+        </figure>
+    {{/each}}
+</div>

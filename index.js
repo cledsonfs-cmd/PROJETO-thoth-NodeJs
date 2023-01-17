@@ -25,6 +25,7 @@ const authRoutes = require('./routes/authRoutes')
 
 //Import Controller
 const ThothController = require('./controllers/ThothController')
+const RedmineController = require('./controllers/RedmineController')
 
 //Template Engine
 const hbs = exphbs.create()

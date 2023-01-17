@@ -11,10 +11,6 @@ const Projeto = db.define('Projeto',{
         type: DataTypes.STRING,
         required: true
     },
-    cnpj: {
-        type: DataTypes.STRING,
-        required: true
-    },
     idredmine: {
         type: DataTypes.STRING,
         required: true
