@@ -1,0 +1,19 @@
+<div class="dashboard">
+    <div class="title-container">
+        <h2>Usuarios Cadastrados</h2>
+    </div>    
+    <ul>
+        {{#each users}}
+            <li>
+                <span class="label">{{this.name}}</span>
+                <span class="actions">
+                    <a href="/thoths/editusr/{{this.id}}" class="btn">Editar</a>
+                    <form action="/thoths/delusr" method="post">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <input type="submit" value="Excluit" class="btn">
+                    </form>
+                </span>
+            </li>
+        {{/each}}
+    </ul>
+</div>

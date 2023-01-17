@@ -1,0 +1,50 @@
+<div class="auth-container">
+    <h2><i class="bi bi-person-fill-gear"></i> {{user.name}}</h2>
+    <form action="/thoths/saveusr" method="post">
+    <input type="hidden" name="id" value="{{user.id}}">
+        <div class="form-control">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" placeholder="Digite seu nome" required value="{{user.name}}">
+        </div>
+        <div class="form-control">
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Digite seu email" required value="{{user.email}}">
+        </div>        
+        <div class="form-control">
+            <label for="tipo">Tipo:</label>
+            <select name="tipo" id="tipo">
+                <option value="presencial" {{presencial}}>Presencial</option>
+                <option value="remoto" {{remoto}}>remoto</option>
+                <option value="misto" {{misto}}>misto</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="lotacao">lotação:</label>
+            <input type="text" name="lotacao" placeholder="Digite a sua lotação" value="{{user.lotacao}}">
+        </div>   
+        <div class="form-control">            
+            <label for="adm">Administrador</label>     
+            <input type="checkbox" name="adm" 
+            {{#if user.adm}} 
+                checked
+            {{/if}}
+            >
+        </div> 
+        <input type="submit" value="Editar">
+        
+    </form>
+    <hr/>
+    <h2><i class="bi bi-person-exclamation"></i> Alterar Senha</h2>
+    <form action="/updatepw" method="post">
+        <input type="hidden" name="id" value="{{user.id}}">
+        <div class="form-control">
+            <label for="password">Senha:</label>
+            <input type="password" name="password" placeholder="Digite a sua senha" required>
+        </div>
+        <div class="form-control">
+            <label for="confirmpassword">Confirmação de senha:</label>
+            <input type="password" name="confirmpassword" placeholder="Confirme a sua senha" required>
+        </div>
+        <input type="submit" value="Editar">
+    </form>
+</div>
